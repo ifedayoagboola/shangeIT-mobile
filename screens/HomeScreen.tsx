@@ -23,7 +23,9 @@ const HomeScreen = () => {
         </SafeAreaView>
       ) : (
         <SafeAreaView style={styles.container2}>
-          <Text className="text-black text-lg">Move to the next screen!</Text>
+          <Text className="text-black text-lg">
+            Welcome to the Home screen!
+          </Text>
         </SafeAreaView>
       )}
     </>

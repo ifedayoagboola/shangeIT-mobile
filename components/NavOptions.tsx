@@ -1,5 +1,11 @@
 import React from "react";
-import { FlatList } from "react-native";
+import {
+  FlatList,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 const data = [
   {
     id: "1",
@@ -10,7 +16,17 @@ const data = [
 ];
 
 const NavOptions = () => {
-  return <FlatList />;
+  return (
+    <FlatList
+      data={data}
+      keyExtractor={(item) => item.id}
+      renderItem={({ item }) => (
+        <TouchableOpacity>
+          <Text>{item.title}</Text>
+        </TouchableOpacity>
+      )}
+    />
+  );
 };
 
 export default NavOptions;
