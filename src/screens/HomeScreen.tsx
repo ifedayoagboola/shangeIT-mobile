@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Image, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import LogoScreen from "./LogoScreen";
 import ExchangeCard from "../components/ExchangeCard";
 import OfferList from "../components/OfferList";
+import NavHeader from "../components/NavHeader";
 
 const HomeScreen = () => {
   const [showLogoScreen, setShowLogoScreen] = useState(true);
@@ -20,8 +28,9 @@ const HomeScreen = () => {
       {showLogoScreen ? (
         <LogoScreen />
       ) : (
-        <SafeAreaView style={styles.container} className="">
-          <View className="px-[30px]">
+        <View style={styles.container} className="px-[30px]">
+          <NavHeader />
+          <View className="">
             <Text className="text-2xl font-semibold text-left py-4">
               Welcome Awa Abigail
             </Text>
@@ -33,7 +42,7 @@ const HomeScreen = () => {
               <OfferList />
             </SafeAreaView>
           </View>
-        </SafeAreaView>
+        </View>
       )}
     </>
   );

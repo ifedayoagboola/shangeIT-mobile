@@ -39,7 +39,7 @@ const Offer: React.FC<OfferProps> = ({
         <Image
           source={require("../assets/Ellipse 23.png")}
           alt="burger illustration"
-          style={{ width: 35, height: 35 }}
+          style={{ width: 50, height: 50 }}
         />
       </View>
       <Text className="w-[80%] border-b border-gray-100 py-3 text-sm">
