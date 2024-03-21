@@ -81,28 +81,20 @@ const data: { count: number; data: OfferData[] } = {
 
 const OfferList = () => {
   return (
-    <View className="flex flex-row items-center justify-center">
-      <FlatList
-        data={data.data}
-        renderItem={({ item }) => (
-          <Offer
-            userId={item.userId}
-            fromCurrency={item.fromCurrency}
-            toCurrency={item.toCurrency}
-            rate={item.rate}
-            amount={item.amount}
-          />
-        )}
-        keyExtractor={(item) => item.id.toString()}
-      />
-    </View>
+    <FlatList
+      data={data.data}
+      renderItem={({ item }) => (
+        <Offer
+          userId={item.userId}
+          fromCurrency={item.fromCurrency}
+          toCurrency={item.toCurrency}
+          rate={item.rate}
+          amount={item.amount}
+        />
+      )}
+      keyExtractor={(item) => item.id.toString()}
+    />
   );
 };
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+
 export default OfferList;
