@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Image,
-  Platform,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { StyleSheet, Text } from "react-native";
 import LogoScreen from "./LogoScreen";
 import ExchangeCard from "../components/ExchangeCard";
 import OfferList from "../components/OfferList";
@@ -18,9 +9,8 @@ import Screen from "../components/Screen";
 const HomeScreen = () => {
   return (
     <Screen style={styles.screen}>
-      {/* <StatusBar /> */}
       <NavHeader />
-      <Text className="text-2xl font-semibold text-left py-4">
+      <Text className="text-xl font-semibold text-left py-4">
         Welcome Awa Abigail
       </Text>
       <ExchangeCard />
@@ -36,7 +26,7 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: "#fff",
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
   },
 });
 

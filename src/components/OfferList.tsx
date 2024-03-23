@@ -2,6 +2,7 @@ import React from "react";
 import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import Offer from "./Offer";
 import Screen from "./Screen";
+import ListItem from "./Offer";
 
 interface OfferData {
   id: number;
@@ -105,13 +106,14 @@ const OfferList = () => {
     <FlatList
       data={data.data}
       renderItem={({ item }) => (
-        <Offer
-          userId={item.userId}
-          fromCurrency={item.fromCurrency}
-          toCurrency={item.toCurrency}
-          rate={item.rate}
-          amount={item.amount}
-        />
+        // <Offer
+        //   userId={item.userId}
+        //   fromCurrency={item.fromCurrency}
+        //   toCurrency={item.toCurrency}
+        //   rate={item.rate}
+        //   amount={item.amount}
+        // />
+        <ListItem title="kndkjkd" />
       )}
       keyExtractor={(item) => item.id.toString()}
     />

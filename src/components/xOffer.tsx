@@ -34,23 +34,20 @@ const Offer: React.FC<OfferProps> = ({
       break;
   }
   return (
-    <View className="w-full ">
+    <View>
       <TouchableOpacity className="flex-row items-center justify-start gap-4">
-        <View className="w-[50px] h-[50px]">
-          <Image
-            source={require("../assets/Ellipse 23.png")}
-            alt="burger illustration"
-            style={{ width: "100%", height: "100%" }}
-          />
-        </View>
-
-        <View className="w-[80%]">
+        <Image
+          source={require("../assets/Ellipse 23.png")}
+          alt="burger illustration"
+          style={{ width: 40, height: 40 }}
+        />
+        <View className="">
           <Text className="border-b border-gray-100 py-3 text-sm">
-            {userId} wants to exchange
+            {userId} wants to exchange{" "}
             <Text className="font-semibold">
               {currency}
               {amount}
-            </Text>
+            </Text>{" "}
             to <Text className="font-semibold">{toCurrency}</Text> at{" "}
             <Text className="font-semibold">{rate}</Text> rate
           </Text>
