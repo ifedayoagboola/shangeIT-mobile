@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import LogoScreen from "./LogoScreen";
 import ExchangeCard from "../components/ExchangeCard";
 import OfferList from "../components/OfferList";

@@ -12,7 +12,7 @@ const AppText: React.FC<AppTextProps> = ({ children, style }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 18,
+    fontSize: 17,
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
   },
 });

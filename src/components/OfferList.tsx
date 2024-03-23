@@ -2,7 +2,8 @@ import React from "react";
 import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import Offer from "./Offer";
 import Screen from "./Screen";
-import ListItem from "./Offer";
+
+import ellipseImage from "../assets/Ellipse-23.png";
 
 interface OfferData {
   id: number;
@@ -11,6 +12,7 @@ interface OfferData {
   toCurrency: string;
   rate: string;
   amount: string;
+  image?: any;
   createdAt: string;
   updatedAt: string;
 }
@@ -25,6 +27,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Naira",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:39:53.063Z",
       updatedAt: "2024-03-06T16:39:53.063Z",
     },
@@ -35,6 +38,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Naira",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:37.026Z",
       updatedAt: "2024-03-06T16:41:37.026Z",
     },
@@ -45,6 +49,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -55,6 +60,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -65,6 +71,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -75,6 +82,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -85,6 +93,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -95,6 +104,7 @@ const data: { count: number; data: OfferData[] } = {
       toCurrency: "Dollar",
       rate: "2060",
       amount: "5500",
+      image: ellipseImage,
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
@@ -106,14 +116,14 @@ const OfferList = () => {
     <FlatList
       data={data.data}
       renderItem={({ item }) => (
-        // <Offer
-        //   userId={item.userId}
-        //   fromCurrency={item.fromCurrency}
-        //   toCurrency={item.toCurrency}
-        //   rate={item.rate}
-        //   amount={item.amount}
-        // />
-        <ListItem title="kndkjkd" />
+        <Offer
+          userId={item.userId}
+          fromCurrency={item.fromCurrency}
+          toCurrency={item.toCurrency}
+          rate={item.rate}
+          amount={item.amount}
+          image={item.image}
+        />
       )}
       keyExtractor={(item) => item.id.toString()}
     />

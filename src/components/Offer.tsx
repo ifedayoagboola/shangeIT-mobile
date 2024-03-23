@@ -12,8 +12,8 @@ import Swipeable from "react-native-gesture-handler/Swipeable";
 import colors from "../config/colors";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
-interface ListItemProps {
-  title: string;
+interface OfferProps {
+  title?: string;
   subTitle?: string;
   userId?: number;
   fromCurrency?: string;
@@ -27,15 +27,37 @@ interface ListItemProps {
   style?: object;
 }
 
-const ListItem: React.FC<ListItemProps> = ({
+const Offer: React.FC<OfferProps> = ({
   title,
   subTitle,
   image,
   IconComponent,
+  userId,
+  fromCurrency,
+  toCurrency,
+  rate,
+  amount,
   onPress,
   renderRightActions,
   style,
 }) => {
+  let currency: string = "";
+  switch (fromCurrency) {
+    case "Pounds":
+      currency = "P";
+      break;
+    case "Euro":
+      currency = "E";
+      break;
+    case "Naira":
+      currency = "N";
+      break;
+    case "Dollar":
+      currency = "$";
+      break;
+    default:
+      break;
+  }
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
@@ -44,7 +66,10 @@ const ListItem: React.FC<ListItemProps> = ({
             {IconComponent}
             {image && <Image style={styles.image} source={image} />}
             <View style={styles.detailsContainer}>
-              <AppText style={styles.title}>{title}</AppText>
+              <AppText style={styles.title}>
+                {userId} wants to exchange {currency}
+                {amount} to {toCurrency} at {rate} rate
+              </AppText>
               {subTitle && (
                 <AppText style={styles.subTitle}>{subTitle}</AppText>
               )}
@@ -59,17 +84,18 @@ const ListItem: React.FC<ListItemProps> = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    padding: 15,
+    paddingVertical: 10,
     backgroundColor: colors.white,
+    width: "90%",
   },
   detailsContainer: {
     marginLeft: 10,
     justifyContent: "center",
   },
   image: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
   },
   subTitle: {
     color: colors.medium,
@@ -79,4 +105,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListItem;
+export default Offer;
