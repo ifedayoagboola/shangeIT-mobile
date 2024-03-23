@@ -52,7 +52,7 @@ const Offer: React.FC<OfferProps> = ({
     case "Naira":
       currency = "N";
       break;
-    case "Dollar":
+    case "Dollars":
       currency = "$";
       break;
     default:
@@ -88,15 +88,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingVertical: 6,
     backgroundColor: colors.white,
-    width: "80%",
+    width: "85%",
   },
   detailsContainer: {
     marginLeft: 10,
     justifyContent: "center",
   },
   image: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
     borderRadius: 25,
   },
   subTitle: {
