@@ -66,9 +66,11 @@ const Offer: React.FC<OfferProps> = ({
             {IconComponent}
             {image && <Image style={styles.image} source={image} />}
             <View style={styles.detailsContainer}>
-              <AppText style={styles.title}>
+              <AppText style={styles.title} numberOfLines={2}>
                 {userId} wants to exchange {currency}
-                {amount} to {toCurrency} at {rate} rate
+                <AppText className="font-bold">{amount}</AppText> to{" "}
+                {toCurrency} at <AppText className="font-bold">{rate}</AppText>{" "}
+                rate
               </AppText>
               {subTitle && (
                 <AppText style={styles.subTitle}>{subTitle}</AppText>
@@ -84,24 +86,25 @@ const Offer: React.FC<OfferProps> = ({
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    paddingVertical: 10,
+    paddingVertical: 6,
     backgroundColor: colors.white,
-    width: "90%",
+    width: "80%",
   },
   detailsContainer: {
     marginLeft: 10,
     justifyContent: "center",
   },
   image: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     borderRadius: 25,
   },
   subTitle: {
     color: colors.medium,
   },
   title: {
-    fontWeight: "500",
+    fontWeight: "600",
+    flexWrap: "wrap",
   },
 });
 

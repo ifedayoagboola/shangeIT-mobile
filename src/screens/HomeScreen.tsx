@@ -10,12 +10,11 @@ const HomeScreen = () => {
   return (
     <Screen style={styles.screen}>
       <NavHeader />
-      <Text className="text-xl font-semibold text-left py-4">
+      <Text className="text-xl font-semibold text-left py-2">
         Welcome Awa Abigail
       </Text>
       <ExchangeCard />
-
-      <Text className="text-lg font-semibold text-left py-4">
+      <Text className="text-lg font-semibold text-left py-2">
         Available Offers
       </Text>
       <OfferList />

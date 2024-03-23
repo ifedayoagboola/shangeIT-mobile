@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import HomeScreen from "./screens/HomeScreen";
 import LogoScreen from "./screens/LogoScreen";
+import OfferList from "./components/OfferList";
 
 export default function App() {
   const [showLogoScreen, setShowLogoScreen] = useState(true);
