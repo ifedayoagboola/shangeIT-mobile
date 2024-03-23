@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import {
   Image,
+  Platform,
   SafeAreaView,
   ScrollView,
+  StatusBar,
   StyleSheet,
   Text,
   View,
@@ -11,34 +13,30 @@ import LogoScreen from "./LogoScreen";
 import ExchangeCard from "../components/ExchangeCard";
 import OfferList from "../components/OfferList";
 import NavHeader from "../components/NavHeader";
+import Screen from "../components/Screen";
 
 const HomeScreen = () => {
   return (
-    <View className="w-full items-center justify-center">
+    <Screen style={styles.screen}>
+      {/* <StatusBar /> */}
       <NavHeader />
-      <View className="w-full">
-        <View className="">
-          <Text className="text-2xl font-semibold text-left py-4">
-            Welcome Awa Abigail
-          </Text>
-          <ExchangeCard />
-        </View>
-        <View className="">
-          <Text className="text-lg font-semibold text-left py-4">
-            Available Offers
-          </Text>
-          <OfferList />
-        </View>
-      </View>
-    </View>
+      <Text className="text-2xl font-semibold text-left py-4">
+        Welcome Awa Abigail
+      </Text>
+      <ExchangeCard />
+
+      <Text className="text-lg font-semibold text-left py-4">
+        Available Offers
+      </Text>
+      <OfferList />
+    </Screen>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  screen: {
     backgroundColor: "#fff",
-    justifyContent: "center",
+    paddingHorizontal: 20,
   },
 });
 

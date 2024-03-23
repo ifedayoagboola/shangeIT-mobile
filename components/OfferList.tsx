@@ -1,6 +1,7 @@
 import React from "react";
 import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import Offer from "./Offer";
+import Screen from "./Screen";
 
 interface OfferData {
   id: number;
@@ -76,6 +77,26 @@ const data: { count: number; data: OfferData[] } = {
       createdAt: "2024-03-06T16:41:46.329Z",
       updatedAt: "2024-03-06T16:41:46.329Z",
     },
+    {
+      id: 7,
+      userId: 2,
+      fromCurrency: "Dollar",
+      toCurrency: "Dollar",
+      rate: "2060",
+      amount: "5500",
+      createdAt: "2024-03-06T16:41:46.329Z",
+      updatedAt: "2024-03-06T16:41:46.329Z",
+    },
+    {
+      id: 8,
+      userId: 2,
+      fromCurrency: "Dollar",
+      toCurrency: "Dollar",
+      rate: "2060",
+      amount: "5500",
+      createdAt: "2024-03-06T16:41:46.329Z",
+      updatedAt: "2024-03-06T16:41:46.329Z",
+    },
   ],
 };
 
@@ -96,5 +117,12 @@ const OfferList = () => {
     />
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    padding: 20,
+    backgroundColor: "#fff",
+  },
+});
 
 export default OfferList;

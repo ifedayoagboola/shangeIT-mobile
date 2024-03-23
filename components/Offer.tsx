@@ -48,10 +48,9 @@ const Offer: React.FC<OfferProps> = ({
           <Text className="border-b border-gray-100 py-3 text-sm">
             {userId} wants to exchange
             <Text className="font-semibold">
-              {" "}
               {currency}
               {amount}
-            </Text>{" "}
+            </Text>
             to <Text className="font-semibold">{toCurrency}</Text> at{" "}
             <Text className="font-semibold">{rate}</Text> rate
           </Text>

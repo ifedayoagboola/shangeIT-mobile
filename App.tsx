@@ -6,6 +6,7 @@ import { store } from "./store";
 import HomeScreen from "./screens/HomeScreen";
 import LogoScreen from "./screens/LogoScreen";
 import OfferList from "./components/OfferList";
+import Screen from "./components/Screen";
 
 export default function App() {
   const [showLogoScreen, setShowLogoScreen] = useState(true);
@@ -18,16 +19,7 @@ export default function App() {
   }, []); // Runs once on component mount
   return (
     <Provider store={store}>
-      <View>
-        {showLogoScreen ? (
-          <LogoScreen />
-        ) : (
-          <View className="bg-white items-center justify-center mt-14 mx-8">
-            <HomeScreen />
-            {/* <StatusBar backgroundColor="#fff" /> */}
-          </View>
-        )}
-      </View>
+      {showLogoScreen ? <LogoScreen /> : <HomeScreen />}
     </Provider>
   );
 }
