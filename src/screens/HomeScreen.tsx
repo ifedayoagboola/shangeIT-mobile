@@ -24,7 +24,6 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   screen: {
-    backgroundColor: "#fff",
     paddingHorizontal: 30,
   },
 });
