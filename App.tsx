@@ -6,7 +6,12 @@ import LogoScreen from "./src/screens/LogoScreen";
 import OfferList from "./src/components/OfferList";
 import { StyleSheet } from "react-native";
 
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 export default function App() {
+  const Stack = createNativeStackNavigator();
+
   const [showLogoScreen, setShowLogoScreen] = useState(true);
 
   useEffect(() => {
@@ -15,9 +20,20 @@ export default function App() {
     }, 1000); // 2000 milliseconds = 2 seconds
     return () => clearTimeout(timeout);
   }, []); // Runs once on component mount
+
+  const StackNavigator = () => {
+    return (
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Welcome" component={LogoScreen} />
+      </Stack.Navigator>
+    );
+  };
   return (
     <Provider store={store}>
-      {showLogoScreen ? <LogoScreen /> : <HomeScreen />}
+      <NavigationContainer>
+        {showLogoScreen ? <LogoScreen /> : <StackNavigator />}
+      </NavigationContainer>
     </Provider>
   );
 }
