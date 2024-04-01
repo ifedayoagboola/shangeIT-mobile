@@ -10,7 +10,7 @@ import {
 
 const NavHeader = () => {
   return (
-    <View className="flex flex-row items-center justify-between">
+    <View className="flex flex-row items-center justify-between bg-red-600 mb-8">
       <TouchableOpacity>
         <Image
           source={require("../assets/face.png")}

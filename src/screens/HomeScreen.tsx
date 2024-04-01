@@ -9,7 +9,7 @@ import Screen from "../components/Screen";
 const HomeScreen = () => {
   return (
     <Screen style={styles.screen}>
-      <NavHeader />
+      {/* <NavHeader /> */}
       <Text className="text-xl font-semibold text-left py-2">
         Welcome Awa Abigail
       </Text>

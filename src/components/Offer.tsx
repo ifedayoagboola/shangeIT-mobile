@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   TouchableHighlight,
 } from "react-native";
-import AppText from "./AppText";
+import AppText from "./Text";
 import Swipeable from "react-native-gesture-handler/Swipeable";
 
 import colors from "../config/colors";
