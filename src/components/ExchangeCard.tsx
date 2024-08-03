@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, Linking, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import Link from "./Link";
 
 const ExchangeCard = () => {
