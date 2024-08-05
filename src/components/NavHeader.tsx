@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FlatList,
-  Image,
-  SafeAreaView,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 const NavHeader = () => {
   return (
